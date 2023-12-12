@@ -35,17 +35,12 @@ def start(sessions, sIP, sPort):
         print(f"AVERAGE LATENCY: {latency}")
         date = sorted(response_times)
         n = len(date)
-        index25th = int(0.25 * n)
-        index50th = int(0.50 * n)
-        index75th = int(0.75 * n)
-        index95th = int(0.95 * n)
-        index99th = int(0.99 * n)
     
-        a = date[index25th]
-        b = date[index50th]
-        c = date[index75th]
-        d = date[index95th]
-        e = date[index99th]
+        a = date[int(0.25 * n)]
+        b = date[int(0.50 * n)]
+        c = date[int(0.75 * n)]
+        d = date[int(0.95 * n)]
+        e = date[int(0.99 * n)]
         print(f"PERCENTILES: {a} {b} {c} {d} {e}")
         
        
